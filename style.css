@@ -1,0 +1,136 @@
+body {
+  background: #1f253d;
+  font-family: 'Abel', sans-serif;
+}
+
+.main { 
+  position: relative;
+}
+.main-h {
+  text-align: center;
+  margin-top: 100px;
+  color: yellow;
+  font-size: 80px; 
+  font-family: 'Anton', sans-serif;
+  text-transform: uppercase;
+}
+.table {
+    color: white;
+    width: 50%;
+    border-collapse: collapse;
+    margin: 50px auto;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+.table-td {
+  width: 150px;
+  height: 40px;
+  text-align: center;
+  cursor: pointer;
+}
+.table-th {
+  text-align: center;
+  background: #3498db;
+  cursor: pointer;
+}
+.table-tr:hover {
+  background-color: rgba(255, 255, 255, 0.144);
+}
+
+ .modal-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  transition: all 0.3s ease;
+  opacity: 0;
+  visibility: hidden;
+  box-sizing: border-box;
+}
+.modal-container h1 {
+  text-align: center;
+}
+.modal-container.active {
+  opacity: 1;
+  visibility: visible;
+}
+.modal-container .overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+}
+.modal-container .modal-wrap {
+  width: 600px;
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%) translateY(-30px);
+  transition: all 0.3s ease;
+  padding-bottom: 50px;
+}
+.modal-container .modal-wrap.active {
+  position: relative;
+  transform: translateX(-50%);
+  opacity: 1;
+  visibility: visible;
+}
+.modal-container .modal-wrap .modal {
+  display: block;
+  padding: 25px;
+  background-color: #fff;
+  border-radius: 3px;
+}
+.modal-container .modal-wrap .modal .modal-content > p {
+  line-height: 170%;
+  font-size: 20px;
+  color: #444;
+}
+.modal-container .modal-wrap .modal .modal-footer {
+  margin-top: 10px;
+}
+
+.main-loader {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 3;
+}
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  margin: 300px auto;
+  
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.ops {
+  border: 5px;
+  
+}
