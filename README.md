@@ -1,2 +1,0 @@
-# swapi.github.io
-SWApi
